@@ -1,8 +1,42 @@
-.main-footer{}
-.copyright{}
-.footer-menu{}
-.footer-menu ul{}
-.footer-menu ul li{}
-.footer-menu ul li a{}
+.main-footer {
+    padding: 30px 0 25px;
+    border-top: 1px solid #d4d4dd;
+}
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright {
+    font-size: 14px;
+    color: #000;
+    margin-right: 75px;
+}
+.footer-menu{
+	flex-grow: 1;
+}
+.footer-menu ul {
+    padding: 0;
+    margin: 0;
+}
+.footer-menu ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+.footer-menu ul li a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
 .footer-callback{}
-.footer-callback a{}
+.footer-callback a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    background-image: url(../images/phone.png);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    padding-left: 32px;
+}
