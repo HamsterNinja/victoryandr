@@ -1,7 +1,60 @@
 {% include "partials/header.twig" %}
 <main class='main-content' id="app">
-<h1>1</h1>
-
-
+	<div class="choice-site">
+		<a class="choice-site-item" href="">
+			<img src="./assets/images/site-1.jpg" alt="">
+		</a>
+		<a class="choice-site-item" href="">
+			<img src="./assets/images/site-2.jpg" alt="">
+		</a>
+	</div>
+	<div class="news_block">
+		<div class="container">
+			{% for item in 0..3 %}
+				<a href="" class="news_block-item">
+					<div class="news_block-item-img"><img src="./assets/images/news1.jpg" alt=""></div>
+					<div class="news_block-item-info">
+						<h4 class="news_block-item-name">Название новости</h4>
+						<div class="news_block-item-text">
+							This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="partners_block">
+		<div class="container-2">
+			{% for item in 0..5 %}
+				<a href="" class="partner-item">
+					<img src="./assets/images/partner.png" alt="">
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="news_block-line">
+		<div class="container">
+			{% for item in 0..3 %}
+				<a href="" class="news-line-item">
+					<h4 class="news-line-item-name">Название новости</h4>
+					<div class="news-line-item-text">
+						This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="about_us-block">
+		<div class="container">
+			<div class="about_us-title">О нас</div>
+			<div class="about_us-text">
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+			</div>
+			<div class="about_us-links">
+				<a href="">Ателье</a>
+				<a href="">Контакты</a>
+			</div>
+		</div>
+	</div>
 </main>
 {% include "partials/footer.twig" %}

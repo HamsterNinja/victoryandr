@@ -14,6 +14,7 @@ html {
 
 
 body {
+	font-family: 'Playfair Display', serif;
     background: #fff;
 }
 
@@ -24,8 +25,28 @@ img {
     
 }
 
-$opensans: 'Open Sans', sans-serif;
-
+.choice-site{}
+.choice-site-item{}
+.choice-site-item img{}
+.news_block{}
+.news_block-item{}
+.news_block-item-img{}
+.news_block-item-info{}
+.news_block-item-name{}
+.news_block-item-text{}
+.partners_block{}
+.partner-item{}
+.partner-item img{}
+.news_block-line{}
+.news-line-item{}
+.news-line-item-name{}
+.news-line-item-text{}
+.about_us-block{}
+.about_us-title{}
+.about_us-text{}
+.about_us-text p{}
+.about_us-links{}
+.about_us-links a{}
 
 
 @import 'pages/home';
