@@ -115,6 +115,8 @@ a.partner-item {
 a.partner-item img {
     opacity: 0.2;
     transition: 0.3s ease;
+    max-width: 90%;
+    height: auto;
 }
 a.partner-item:hover img{
 	opacity: 1;
