@@ -1,7 +1,114 @@
 {% include "partials/header.twig" %}
 <main class='main-content' id="app">
-<h1>1</h1>
-
-
+	<div class="main-banner">
+	<div class="swiper-container">
+	<div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<div class="swiper-slide-content" style="background-image:url(./assets/images/slide1.jpg);">
+        	<div class="slide-info">
+        		<div class="slide-name">
+        			<h4>BLACK FRIDAY</h4>
+        		</div>
+        		<div class="slide-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</div>
+        	</div>
+        	</div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="swiper-slide-content" style="background-image:url(./assets/images/slide1.jpg);">
+        	<div class="slide-info">
+        		<div class="slide-name">
+        			<h4>BLACK FRIDAY</h4>
+        		</div>
+        		<div class="slide-text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</div>
+        	</div>
+        	</div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+	</div>
+	</div>
+	<div class="collections_block">
+		<div class="container">
+			<div class="collections_block-header">
+				<div class="main-page-title">Коллекции</div>
+				<div class="tabs-buttons">
+					<div class="choice-button active" data-id="c1">ОСЕНЬ-ЗИМА 2019</div>
+					<div class="choice-button" data-id="c2">ВЕСНА-ЛЕТО 2019</div>
+					<div class="choice-button" data-id="c3">SALE</div>
+				</div>
+			</div>
+			<div class="colections-content">
+				<div class="colections-content-inner" id="c1">
+					<div class="collections-slick">
+						{% for item in 0..5 %}
+							<div class="collections-slick-content">
+								<a class="collections-slick-content-item" href="">
+									<img src="./assets/images/collection.jpg" alt="">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="colections-content-inner" id="c2">
+					<div class="collections-slick">
+						{% for item in 0..5 %}
+							<div class="collections-slick-content">
+								<a class="collections-slick-content-item" href="">
+									<img src="./assets/images/collection.jpg" alt="">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="colections-content-inner" id="c3">
+					<div class="collections-slick">
+						{% for item in 0..5 %}
+							<div class="collections-slick-content">
+								<a class="collections-slick-content-item" href="">
+									<img src="./assets/images/collection.jpg" alt="">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="news_block">
+		<div class="container">
+			<div class="main-page-title">Новости</div>
+			<div class="news_block-inner">
+				{% for item in 0..1 %}
+					<a href="" class="news_block-item">
+						<img src="./assets/images/news.jpg" alt="">
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="about_company-block">
+		<div class="container">
+			<div class="about_company-block-title"><h1>PAROLE BY VICTORIA ANDREYANOVA</h1></div>
+			<div class="about_company-block-triggers">
+				<div class="about_company-block-trigger">
+					<p><b>Parole</b> ценит глубокий внутренний мир и считает порыв души достаточным поводом действовать.</p>
+				</div>
+				<div class="about_company-block-trigger">
+					<p><b>Parole</b> считает, что самое интересное кроется в скрытых деталях, и продумывает всё до тончайших нюансов.</p>
+				</div>
+				<div class="about_company-block-trigger">
+					<p><b>Parole</b> не считает мягкость слабостью, и выбирает самые ласковые ткани.</p>
+				</div>
+				<div class="about_company-block-trigger">
+					<p><b>Parole</b> холит и лелеет свой символ - маленькую белку с орехом в лапках.</p>
+				</div>
+			</div>
+			<div class="about_company-block-text">
+				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+				<p>Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+			</div>
+			<div class="company-read-more"><a href="">ЧИТАТЬ ПОДРОБНЕЕ</a></div>
+		</div>
+	</div>
 </main>
 {% include "partials/footer.twig" %}
