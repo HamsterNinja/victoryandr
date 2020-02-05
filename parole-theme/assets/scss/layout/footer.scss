@@ -1,5 +1,14 @@
+footer.main-footer {
+    position: relative;
+    top: 160px;
+    left: 260px;
+    width: calc(100% - 260px);
+}
+body.home footer.main-footer{
+    top: 0;
+}
 .footer-content {
-    padding: 45px 0 55px;
+    padding: 45px 45px 55px;
     border-top: 1px solid #d0d0d0;
 }
 .footer-content .container {
@@ -11,6 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 810px;
 }
 .footer-menu-name {
     font-size: 12px;
@@ -72,7 +82,7 @@
     padding: 15px 5px;
 }
 .under-footer{
-	padding: 30px 0;
+	padding: 30px 45px;
 }
 .under-footer .container {
     display: flex;

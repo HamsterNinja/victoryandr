@@ -5,16 +5,46 @@ header.main-header {
     right: 0;
     width: 100%;
     z-index: 10;
-    padding-top: 68px;
-}
-header.main-header .container {
+    padding: 68px 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
 .header-left {
-    width: 210px;
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    padding-left: 45px;
+    top: 0;
+    padding-top: 68px;
+    transition: 0.3s ease;
+    overflow: auto;
+}
+.header-left::-webkit-scrollbar { 
+    width: 3px;
+     height: 3px;
+ }
+.header-left::-webkit-scrollbar-button {
+  display: none; 
+}
+.header-left::-webkit-scrollbar-track {  
+    background-color: #dedede;
+}
+.header-left::-webkit-scrollbar-track-piece {
+ background-color: #ffffff;
+}
+.header-left::-webkit-scrollbar-thumb { 
+    height: 50px; background-color: #dedede; border-radius: 3px;
+}
+.header-left::-webkit-scrollbar-corner { 
+    background-color: #dedede;
+}
+.header-left::-webkit-resizer { 
+    background-color: #dedede;
+}
+body.home .header-left{
+    background-color: transparent;
 }
 .header-callback{
 	margin-bottom: 45px;
@@ -34,7 +64,9 @@ header.main-header .container {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    width: calc(100% - 210px);
+    width: 100%;
+    padding-left: 260px;
+    padding-right: 45px;
 }
 
 .header-logo {

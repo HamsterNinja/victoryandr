@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3cbbf246028706b77b91"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a8f4fe904adc7a4355e3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -924,12 +924,25 @@ var swiper = new Swiper('.swiper-container', {
 
 $('.collections-slick').slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     arrows: true,
     dots: false
 });
-
+$('.product-slick-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.product-slick-nav'
+});
+$('.product-slick-nav').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: '.product-slick-for',
+    focusOnSelect: true,
+    vertical: true
+});
 $('.choice-button').click(function (event) {
     event.preventDefault();
     $('.choice-button').removeClass('active');
@@ -943,6 +956,21 @@ $('.choice-button').click(function (event) {
             });
         });
     }
+});
+$('.category-list-menu-name').click(function (e) {
+    $(this).toggleClass('active');
+    $(this).parent().find('.category-list-menu-content').slideToggle();
+});
+$(document).ready(function () {
+    var menu_fixed_is = $('.header-top').offset().top;
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > menu_fixed_is + 100) {
+            $('.header-left').css('background-color', '#fff');
+        } else {
+            $('.header-left').css('background-color', 'transparent');
+        }
+    });
 });
 
 /***/ }),

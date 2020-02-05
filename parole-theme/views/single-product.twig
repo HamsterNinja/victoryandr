@@ -1,4 +1,94 @@
 {% include "partials/header.twig" %}
-<main class='main-content' id="app">
+<main class='main-content single' id="app">
+	<nav class="woocommerce-breadcrumb"><a href="">Главная</a> / ОСЕНЬ-ЗИМА 2019</nav>
+	<div class="product-content">
+		<div class="product-slider">
+			<div class="product-slick-for">
+				{% for item in 0..2 %}
+					<div class="product-slick-for-content">
+						<a data-fancybox="" href=""><img src="./assets/images/product.jpg" alt=""></a>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="product-slick-nav">
+				{% for item in 0..2 %}
+					<div class="product-slick-nav-content">
+						<img src="./assets/images/product.jpg" alt="">
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="product-info">
+			<div class="product-name"><h1>Блуза объемная из принтованной вискозы</h1></div>
+			<div class="product-info-content">
+				<p>Наличие: Есть в наличии</p>
+				<p>Артикул: P-FW19-570-3</p>
+			</div>
+			<div class="product-price">5 000 &#8381;</div>
+			<div class="product-sizes">
+				<div class="product-sizes-header">
+					<div class="product-sizes-name">Выберите размер</div>
+					<a class="product-sizes-table" href="">Таблица размеров</a>
+				</div>
+				<div class="product-sizes-content">
+					{% for item in 0..5 %}
+					<label class="control control-radio">		
+            			<input type="radio" name="radio" />
+        				<div class="control_indicator">41</div>
+    				</label>
+    				{% endfor %}
+				</div>
+			</div>
+			<div class="product-colors">
+				<div class="product-colors-name">Выберите цвет</div>
+				<select name="product_color" id="">
+					{% for item in 0..5 %}
+					<option value="">Глубокий таупе</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="product-buttons">
+				<a class="btn-cart" href="">Добавить в корзину</a>
+				<a class="btn-favorite" href=""><img src="./assets/images/heart.svg" alt=""></a>
+			</div>
+			<div class="product-description">
+				Брюки из костюмной поливискозы со стретчем умеренного объема, зауженные к низу. Спереди отстрочены стрелки. Карманы наклонные с отрезным бочком.
+			</div>
+		</div>
+	</div>
+	<div class="collections_block">
+			<div class="collections_block-header">
+				<div class="main-page-title">Дополнить образ</div>
+				<div class="tabs-buttons">
+					<div class="choice-button active" data-id="c1">Похожие товары</div>
+					<div class="choice-button" data-id="c2">Комплекты</div>
+				</div>
+			</div>
+			<div class="colections-content">
+				<div class="colections-content-inner" id="c1">
+					<div class="collections-slick">
+						{% for item in 0..5 %}
+							<div class="collections-slick-content">
+								<a class="collections-slick-content-item" href="">
+									<img src="./assets/images/collection.jpg" alt="">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="colections-content-inner" id="c2">
+					<div class="collections-slick">
+						{% for item in 0..5 %}
+							<div class="collections-slick-content">
+								<a class="collections-slick-content-item" href="">
+									<img src="./assets/images/collection.jpg" alt="">
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>	
+
+	</div>
 </main>
 {% include "partials/footer.twig" %}
