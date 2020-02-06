@@ -83,5 +83,4 @@ $('.js-search').click(function(e){
   $('.hidden-menu_block').removeClass('active');
   $('.hidden-search_block').toggleClass('active');
   $('.overlay').removeClass('active');
-
 });
