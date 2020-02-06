@@ -24,7 +24,11 @@ img {
     max-width: 100%;
 }
 
-
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 105px 0 305px;
+}
 .main-content {
     left: 260px;
     position: relative;

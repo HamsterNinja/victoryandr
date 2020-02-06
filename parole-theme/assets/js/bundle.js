@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a8f4fe904adc7a4355e3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7a8686a1fec36545c908"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -913,64 +913,86 @@ module.exports = Html5Entities;
 
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 60,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        clickable: true
-    }
+  slidesPerView: 1,
+  spaceBetween: 60,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    clickable: true
+  }
 });
 
 $('.collections-slick').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    arrows: true,
-    dots: false
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  arrows: true,
+  dots: false
 });
 $('.product-slick-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.product-slick-nav'
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.product-slick-nav'
 });
 $('.product-slick-nav').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    asNavFor: '.product-slick-for',
-    focusOnSelect: true,
-    vertical: true
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.product-slick-for',
+  focusOnSelect: true,
+  vertical: true
 });
 $('.choice-button').click(function (event) {
-    event.preventDefault();
-    $('.choice-button').removeClass('active');
-    $(this).addClass('active');
+  event.preventDefault();
+  $('.choice-button').removeClass('active');
+  $(this).addClass('active');
 
-    var id = $(this).attr('data-id');
-    if (id) {
-        $('.colections-content-inner:visible').fadeOut(0, function () {
-            $('.colections-content').find('#' + id).fadeIn('slow', function () {
-                $('.collections-slick').slick('reinit');
-            });
-        });
-    }
+  var id = $(this).attr('data-id');
+  if (id) {
+    $('.colections-content-inner:visible').fadeOut(0, function () {
+      $('.colections-content').find('#' + id).fadeIn('slow', function () {
+        $('.collections-slick').slick('reinit');
+      });
+    });
+  }
 });
 $('.category-list-menu-name').click(function (e) {
-    $(this).toggleClass('active');
-    $(this).parent().find('.category-list-menu-content').slideToggle();
+  $(this).toggleClass('active');
+  $(this).parent().find('.category-list-menu-content').slideToggle();
 });
 $(document).ready(function () {
-    var menu_fixed_is = $('.header-top').offset().top;
+  var menu_fixed_is = $('.header-top').offset().top;
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > menu_fixed_is + 100) {
-            $('.header-left').css('background-color', '#fff');
-        } else {
-            $('.header-left').css('background-color', 'transparent');
-        }
-    });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > menu_fixed_is + 100) {
+      $('.header-left').removeClass('no_bg');
+    } else {
+      $('.header-left').addClass('no_bg');
+    }
+  });
+});
+
+$('.btn-hamburger').click(function (e) {
+  $(this).toggleClass('active');
+  $(this).parent().toggleClass('active');
+  $('.hidden-menu_block').toggleClass('active');
+  $('.overlay').toggleClass('active');
+  $('.hidden-search_block').removeClass('active');
+});
+$('.overlay').click(function (e) {
+  $(this).removeClass('active');
+  $('.btn-hamburger').removeClass('active');
+  $('.btn-hamburger').parent().removeClass('active');
+  $('.hidden-menu_block').removeClass('active');
+});
+
+$('.js-search').click(function (e) {
+  $('.btn-hamburger').removeClass('active');
+  $('.btn-hamburger').parent().removeClass('active');
+  $('.hidden-menu_block').removeClass('active');
+  $('.hidden-search_block').toggleClass('active');
+  $('.overlay').removeClass('active');
 });
 
 /***/ }),
