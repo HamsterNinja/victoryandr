@@ -1,0 +1,23 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+	<div class="catalog-content">
+		<div class="catalog-content-header">
+			<div class="catalog-title">
+				<h1>Каталог</h1>
+			</div>
+				<nav class="woocommerce-breadcrumb"><a href="">Главная</a> / Каталог</nav>
+		</div>
+		<div class="catalog-content-inner">
+		{% for item in 0..11 %}
+			<a class="catalog-content-item" href="" style="background-image: url(./assets/images/collection.jpg);">
+					<div class="catalog-content-item-name"><h4>Блуза объемная из принтованной вискозы</h4></div>
+					<div class="catalog-content-item-price">
+						<div class="catalog_old-price">14 000 руб</div>
+						<div class="catalog_current-price">14 000 руб</div>
+					</div>
+			</a>
+		{% endfor %}
+		</div>
+	</div>
+</main>
+{% include "partials/footer.twig" %}
